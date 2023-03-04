@@ -1,0 +1,254 @@
+.bg{
+    background-image: url(https://static.vecteezy.com/system/resources/previews/011/163/963/non_2x/northern-lights-aurora-background-free-vector.jpg);
+    background-repeat: no-repeat;
+    aspect-ratio: auto 150 / 96;
+    margin: auto;
+   
+    
+}
+
+.main{
+   margin: 0;
+   padding: 0;
+   height: 100%;
+   width: 100%;
+   padding: 0;
+   box-sizing: border-box;
+   display: flex;
+    align-items: center;
+    justify-content: center;
+    
+
+}
+
+.us{
+  /*  animation: bg-animation 60s linear infinite;
+    background-image: url('bg1.jpg');
+    background-size: cover;
+    background-position: center center;*/
+   
+    height: 100vh;
+    width: 100%;
+    background-image: url(bg1.jpg);
+    background-size: cover;
+   background-position: center;
+    background-repeat: no-repeat;
+    transition: 8s;
+
+    animation: change 60s infinite ease-in-out;
+   
+
+}
+
+@keyframes change{
+    0%{
+        background-image: url(bg1.jpg);
+    }5.263%{
+        background-image: url(bg2.jpg);
+    }10.526%{
+        background-image: url(bg3.jpg);
+    }15.789%{
+        background-image: url(bg4.jpg);
+    }21.052%{
+        background-image: url(bg5.jpg);
+    }26.315%{
+        background-image: url(bg6.jpg);
+    }31.578%{
+        background-image: url(bg7.jpg);
+    }36.841%{
+        background-image: url(bg8.jpg);
+    }42.104%{
+        background-image: url(bg9.jpg);
+    }47.367%{
+        background-image: url(bg10.jpg);
+    }52.630%{
+        background-image: url(bg11.jpg);
+    }57.893%{
+        background-image: url(bg12.jpg);
+    }63.156%{
+        background-image: url(bg13.jpg);
+    }68.419%{
+        background-image: url(bg14.jpg);
+    }78.945%{
+        background-image: url(bg15.jpg);
+    }84.208%{
+        background-image: url(bg16.jpg);
+    }89.471%{
+        background-image: url(bg17.jpg);
+    }94.734%{
+        background-image: url(bg18.jpg);
+    }100%{
+        background-image: url(bg19.jpg);
+    }
+    
+}
+
+.float_center {
+    position: relative;
+    top: 300px;
+}
+
+.float_center a{
+    background: #9ddaea;
+    padding: 10px 24px;
+    text-decoration: none;
+    font-size: 15px;
+    border-radius: 20px;
+}
+
+nav {
+    text-align: center;
+    font-size:large;
+    font-family: 'Zeyada', cursive;
+    
+}
+
+
+
+h1{
+    text-align: center;
+    color:rgb(255, 128, 253);
+    font-size: xx-large;
+    font-family: 'Zeyada', cursive;
+}
+
+
+
+:root {
+    --primary: #f2dcf6;
+    --bg-color: rgb(5, 53, 61);
+    --bg-envelope-color: #f1a9f4;
+    --envelope-tab: #f1a9f4;
+    --envelope-cover: #c929ce;
+    --envelope-side:#9f34c6;
+    --envelope-down:#7b31ac;
+    --envelope-top:#c660e5;
+    --shadow-color: rgba(0, 0, 0, 0.2);
+    --txt-color: #444;
+    --heart-color: rgb(152, 234, 229);
+  }
+  
+  
+  .container {
+    height: 100vh;
+    display: grid;
+    place-items: center;
+  }
+
+  
+  .container > .enve-wrapper {
+    background: var(--bg-envelope-color);
+    box-shadow: 0 0 40px var(--shadow-color);
+    width: 300px;
+    height: 230px;
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .container > .enve-wrapper > .envelope {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .container > .enve-wrapper > .envelope::before {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    border-top: 130px solid var(--envelope-top);
+    border-right: 150px solid transparent;
+    border-left: 150px solid transparent;
+    top: 0;
+    transform-origin: top;
+    transition: all 0.5s ease-in-out 0.7s;
+  }
+  
+ .container > .enve-wrapper > .envelope::after {
+    content: "";
+    position: absolute;
+    z-index: 2;
+   border-top: 130px solid transparent;
+    border-left: 150px solid var(--envelope-side);
+    border-right: 150px solid var(--envelope-side);
+    border-bottom: 100px solid var(--envelope-down);
+    bottom: 0;
+    transition: ease-in-out;
+  }
+  
+
+  .envelope > .letter {
+    position: absolute;
+    right: 60%;
+    left: 1%;
+    bottom: 0;
+    width: 92%;
+    height: 80%;
+    background: var(--primary);
+    transition: all 1s ease-in-out;
+    padding: 20px 10px;
+    box-shadow: 0 0 10px var(--shadow-color);
+    transform: scaleY(0);
+    transform-origin: bottom;
+    z-index: 1;
+    overflow: auto;
+  }
+  
+  .envelope >.letter > .txt {
+    font-family: "Zeyada", cursive;
+    font-size: 14px;
+    color: var(--txt-color);
+    text-align: left;
+  }
+  
+  .heart {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 15px;
+    height: 15px;
+    background: var(--heart-color);
+    z-index: 4;
+    transform: translate(-50%, -20%) rotate(45deg);
+    transition: transform 0.5s ease-in-out 1s;
+    box-shadow: 0 0 10px var(--shadow-color);
+    cursor: pointer;
+  }
+  
+  .heart::before,
+  .heart::after {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: var(--heart-color);
+    border-radius: 50%;
+  }
+ .heart::before{
+    top: -7.5px;
+  }
+
+
+  .heart::after{
+    right: 7.5px; 
+  }
+    
+  
+  
+  
+   
+.flap > .envelope::before{
+    z-index: 0;
+    transform:scaleY(-1);
+}
+
+.flap > .envelope .letter{
+ 
+    z-index: 5;
+    bottom: 50px;
+    transform: scaleY(1.5);
+    transition-delay: 1s;
+}
+.flap > .heart{
+    transform: rotate(90deg);
+    transition-delay: 0.4s;
+}
